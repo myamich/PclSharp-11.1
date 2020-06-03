@@ -10,7 +10,7 @@ using namespace pcl;
 using namespace std;
 using namespace pcl::filters;
 
-typedef boost::shared_ptr<PointCloud<PointXYZ>> boost_cloud;
+typedef shared_ptr<PointCloud<PointXYZ>> boost_cloud;
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,7 +39,7 @@ EXPORT(void) filters_heightmap2d_xyz_setInputCloud(HeightMap2D<PointXYZ>* ptr, P
 
 EXPORT(void) filters_heightmap2d_xyz_setIndices(HeightMap2D<PointXYZ>* ptr, vector<int>* indices)
 {
-	ptr->setIndices(boost::shared_ptr<vector<int>>(boost::shared_ptr<vector<int>>(), indices));
+	ptr->setIndices(shared_ptr<vector<int>>(shared_ptr<vector<int>>(), indices));
 }
 
 EXPORT(vector<int>*) filters_heightmap2d_xyz_getMaximaCloudIndicesFiltered(HeightMap2D<PointXYZ>* ptr)

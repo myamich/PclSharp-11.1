@@ -10,7 +10,7 @@ using namespace pcl;
 using namespace std;
 
 typedef ExtractIndices<PointXYZ> filter_t;
-typedef boost::shared_ptr<PointCloud<PointXYZ>> boost_cloud;
+typedef shared_ptr<PointCloud<PointXYZ>> boost_cloud;
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,7 +39,7 @@ EXPORT(void) filters_extractIndices_xyz_setInputCloud(ExtractIndices<PointXYZ>* 
 
 EXPORT(void) filters_extractIndices_xyz_setIndices(ExtractIndices<PointXYZ>* ptr, vector<int>* indices)
 {
-	ptr->setIndices(boost::shared_ptr<vector<int>>(boost::shared_ptr<vector<int>>(), indices));
+	ptr->setIndices(shared_ptr<vector<int>>(shared_ptr<vector<int>>(), indices));
 }
 
 EXPORT(void) filters_extractIndices_xyz_setKeepOrganized(ExtractIndices<PointXYZ>* ptr, int value)

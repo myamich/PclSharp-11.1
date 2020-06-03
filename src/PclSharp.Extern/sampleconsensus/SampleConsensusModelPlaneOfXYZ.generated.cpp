@@ -10,7 +10,7 @@ using namespace pcl;
 using namespace std;
 
 typedef SampleConsensusModelPlane<PointXYZ> sac_plane;
-typedef boost::shared_ptr<PointCloud<PointXYZ>> boost_cloud;
+typedef shared_ptr<PointCloud<PointXYZ>> boost_cloud;
 
 #ifdef __cplusplus  
 extern "C" {  // only need to export C interface if  

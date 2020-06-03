@@ -87,7 +87,7 @@ using namespace std;
 
 typedef pcl::<#=cppin#> <#=cppin#>;
 typedef <#=cppWrapper#> search_t;
-typedef boost::shared_ptr<pcl::PointCloud<<#=cppin#>>> boost_cloud;
+typedef shared_ptr<pcl::PointCloud<<#=cppin#>>> boost_cloud;
 
 #ifdef __cplusplus
 extern "C" {

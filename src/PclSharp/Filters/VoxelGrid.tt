@@ -174,7 +174,7 @@ using namespace pcl;
 using namespace std;
 
 typedef <#=cppWrapper#> voxel_grid;
-typedef boost::shared_ptr<PointCloud<<#=cppin#>>> boost_cloud;
+typedef shared_ptr<PointCloud<<#=cppin#>>> boost_cloud;
 
 #ifdef __cplusplus
 extern "C" {
@@ -203,7 +203,7 @@ extern "C" {
 
 <#=i.ExportI("void", "setIndices", "vector<int>* indices")#>
 {
-	ptr->setIndices(boost::shared_ptr<vector<int>>(boost::shared_ptr<vector<int>>(), indices));
+	ptr->setIndices(shared_ptr<vector<int>>(shared_ptr<vector<int>>(), indices));
 }
 
 <#=i.ExportI("PointXYZ", "getLeafSize", "")#>

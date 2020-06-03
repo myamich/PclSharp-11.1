@@ -11,7 +11,7 @@ using namespace std;
 
 typedef pcl::PointXYZ PointXYZ;
 typedef OrganizedNeighbor<PointXYZ> search_t;
-typedef boost::shared_ptr<pcl::PointCloud<PointXYZ>> boost_cloud;
+typedef shared_ptr<pcl::PointCloud<PointXYZ>> boost_cloud;
 
 #ifdef __cplusplus
 extern "C" {

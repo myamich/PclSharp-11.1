@@ -18,27 +18,147 @@
     <ClInclude Include="export.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="filters\HeightMap2D.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-	<ClCompile Include="common\*.cpp">
+    <ClCompile Include="common\ModelCoefficients.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pointcloud\*.cpp">
+    <ClCompile Include="common\PCAOfXYZ.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="std\*.cpp">
+    <ClCompile Include="common\PclBaseOfXYZ.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pointcloud\*.cpp">
+    <ClCompile Include="common\PclBaseOfXYZRGBA.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="filters\*.cpp">
+    <ClCompile Include="common\PointIndices.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-	<ClCompile Include="registration\*.cpp">
+    <ClCompile Include="eigen\Matrix4f.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="io\*.cpp">
+    <ClCompile Include="eigen\VectorXf.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="features\FPFHEstimationOfPointXYZAndNormal.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="features\IntegralImageNormalEstimationOfPointXYZAndNormal.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\ExtractIndicesXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\Heightmap2DOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\StatisticalOutlierRemovalOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filters\VoxelGridOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\PCDReader.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pointcloud\PointCloudOfNormal.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pointcloud\PointCloudOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pointcloud\PointCloudOfXYZL.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pointcloud\PointCloudOfXYZRGBA.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pointcloud\PolygonMesh.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PointSizes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="registration\iterativeclosestpointofpointxyz_pointxyz.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="registration\TransformationEstimationPointToPlaneLLSOfPointNormal_PointNormal.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sampleconsensus\SampleConsensusModelPlaneOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="search\KdTreeOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="search\OrganizedNeighborOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\CPCSegmentationOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\EuclideanClusterExtractionOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\LCCPSegmentationOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SACSegmentationOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SupervoxelClusteringOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SupervoxelClusteringOfXYZRGBA.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SupervoxelClustersOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SupervoxelClustersOfXYZRGBA.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SupervoxelOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="segmentation\SupervoxelOfXYZRGBA.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\MultiMapOfuintAnduint.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfByte.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfFloat.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfInt.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfNormal.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfPointIndices.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfUInt.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfXYZ.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfXYZL.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="std\VectorOfXYZRGBA.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="surface\ConvexHullOfXYZ.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

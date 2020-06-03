@@ -144,9 +144,9 @@ using namespace pcl;
 using namespace pcl::registration;
 using namespace std;
 
-typedef boost::shared_ptr<PointCloud<<#=cps#>>> boost_src;
-typedef boost::shared_ptr<PointCloud<<#=cpt#>>> boost_tgt;
-typedef boost::shared_ptr<vector<int>> boost_indices;
+typedef shared_ptr<PointCloud<<#=cps#>>> boost_src;
+typedef shared_ptr<PointCloud<<#=cpt#>>> boost_tgt;
+typedef shared_ptr<vector<int>> boost_indices;
 typedef Eigen::Matrix<float, 4, 4> Matrix4;
 typedef <#=cppWrapper#> classType;
 
@@ -179,14 +179,14 @@ extern "C" {
 { ptr->setInputSource(boost_src(boost_src(), cloud)); }
 
 <#=i.ExportI("PointCloud<cps>*", "getInputSource", "")#>
-{ return boost::const_pointer_cast<PointCloud<<#=cps#>>>(ptr->getInputSource()).get(); }
+{ return const_pointer_cast<PointCloud<<#=cps#>>>(ptr->getInputSource()).get(); }
 
 
 <#=i.ExportI("void", "setInputTarget", "PointCloud<cpt>* cloud")#>
 { ptr->setInputTarget(boost_tgt(boost_tgt(), cloud)); }
 
 <#=i.ExportI("PointCloud<cps>*", "getInputTarget", "")#>
-{ return boost::const_pointer_cast<PointCloud<<#=cpt#>>>(ptr->getInputTarget()).get(); }
+{ return const_pointer_cast<PointCloud<<#=cpt#>>>(ptr->getInputTarget()).get(); }
 
 #ifdef __cplusplus  
 }

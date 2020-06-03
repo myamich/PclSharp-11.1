@@ -10,7 +10,7 @@ using namespace pcl;
 using namespace std;
 
 typedef VoxelGrid<PointXYZ> voxel_grid;
-typedef boost::shared_ptr<PointCloud<PointXYZ>> boost_cloud;
+typedef shared_ptr<PointCloud<PointXYZ>> boost_cloud;
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,7 +39,7 @@ EXPORT(void) filters_voxelGrid_xyz_setInputCloud(VoxelGrid<PointXYZ>* ptr, Point
 
 EXPORT(void) filters_voxelGrid_xyz_setIndices(VoxelGrid<PointXYZ>* ptr, vector<int>* indices)
 {
-	ptr->setIndices(boost::shared_ptr<vector<int>>(boost::shared_ptr<vector<int>>(), indices));
+	ptr->setIndices(shared_ptr<vector<int>>(shared_ptr<vector<int>>(), indices));
 }
 
 EXPORT(PointXYZ) filters_voxelGrid_xyz_getLeafSize(VoxelGrid<PointXYZ>* ptr)

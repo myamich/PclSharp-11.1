@@ -8,8 +8,8 @@
 using namespace pcl;
 using namespace std;
 
-typedef boost::shared_ptr<PointCloud<PointXYZ>> boost_cloud;
-typedef boost::shared_ptr<vector<int>> boost_indices;
+typedef shared_ptr<PointCloud<PointXYZ>> boost_cloud;
+typedef shared_ptr<vector<int>> boost_indices;
 
 #ifdef __cplusplus
 extern "C" {

@@ -5,8 +5,8 @@
 using namespace pcl;
 using namespace std;
 typedef pcl::visualization::PCLVisualizer visualizer;
-typedef boost::shared_ptr<PointCloud<PointXYZ>> boost_xyz;
-typedef boost::shared_ptr<PointCloud<PointXYZRGBA>> boost_xyzrgba;
+typedef shared_ptr<PointCloud<PointXYZ>> boost_xyz;
+typedef shared_ptr<PointCloud<PointXYZRGBA>> boost_xyzrgba;
 
 #ifdef __cplusplus
 extern "C" {
