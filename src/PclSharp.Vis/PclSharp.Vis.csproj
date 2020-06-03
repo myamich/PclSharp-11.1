@@ -65,9 +65,9 @@
     <Compile Include="Visualizer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PclSharp\PclSharp.csproj">
-      <Project>{3795cb2e-ff81-4c7d-99c8-0589b7f1385d}</Project>
-      <Name>PclSharp</Name>
+    <ProjectReference Include="..\PclSharp\PclSharpCore.csproj">
+      <Project>{152097ef-59a7-4011-9572-e8c2bd846c76}</Project>
+      <Name>PclSharpCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
