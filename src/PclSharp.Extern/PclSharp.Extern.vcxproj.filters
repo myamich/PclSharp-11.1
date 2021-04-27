@@ -161,5 +161,8 @@
     <ClCompile Include="surface\ConvexHullOfXYZ.generated.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="io\PCDWriter.generated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

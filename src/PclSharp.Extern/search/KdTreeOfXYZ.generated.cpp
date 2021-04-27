@@ -12,6 +12,8 @@ using namespace std;
 typedef pcl::PointXYZ PointXYZ;
 typedef KdTree<PointXYZ> search_t;
 typedef shared_ptr<pcl::PointCloud<PointXYZ>> boost_cloud;
+typedef pcl::PointIndices PointIndices;
+typedef std::vector<float> vectorOfFloat;
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,10 +36,19 @@ EXPORT(void) search_kdtree_xyz_setInputCloud(KdTree<PointXYZ>* ptr, pcl::PointCl
 }
 
 EXPORT(void) search_kdtree_xyz_setSortedResults(KdTree<PointXYZ>* ptr, int value)
-{ ptr->setSortedResults(value); }
-EXPORT(int) search_kdtree_xyz_getSortedResults(KdTree<PointXYZ>* ptr)
-{ return ptr->getSortedResults(); }
+{ 
+	ptr->setSortedResults(value); 
+}
 
+EXPORT(int) search_kdtree_xyz_getSortedResults(KdTree<PointXYZ>* ptr)
+{ 
+	return ptr->getSortedResults(); 
+}
+
+EXPORT(int) search_kdtree_xyz_nearestKSearch(KdTree<PointXYZ>* ptr, PointXYZ point, int k, PointIndices* k_indices, vectorOfFloat* k_sqr_distance)
+{
+	return ptr->nearestKSearch(point, k, k_indices, k_sqr_distance);
+}
 #ifdef __cplusplus  
 }
 #endif  

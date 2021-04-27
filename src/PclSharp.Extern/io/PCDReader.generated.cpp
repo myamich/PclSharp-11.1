@@ -25,6 +25,7 @@ EXPORT(int32_t) io_pcdreader_read_xyz(PCDReader* ptr, const char* str, PointClou
 {
 	return ptr->read(string(str), *cloud, offset);
 }
+
 EXPORT(int32_t) io_pcdreader_read_xyzrgba(PCDReader* ptr, const char* str, PointCloud<PointXYZRGBA>* cloud, int offset)
 { return ptr->read(string(str), *cloud, offset); }
 
