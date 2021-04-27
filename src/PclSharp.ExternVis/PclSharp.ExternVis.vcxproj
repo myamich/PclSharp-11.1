@@ -88,7 +88,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(PCL_ROOT)3rdParty\VTK\include\vtk-8.0;$(PCL_ROOT)include\pcl-1.11.0;$(PCL_ROOT)3rdParty\Eigen\eigen3;$(PCL_ROOT)3rdParty\Boost\include\boost-1_73;C:\Program Files\OpenNI2\Include;$(PCL_ROOT)3rdParty\FLANN\include;$(PCL_ROOT)3rdParty\Qhull\include;$(PCL_ROOT)3rdParty\VTK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(PCL_ROOT)3rdParty\VTK\include\vtk-8.0;$(PCL_ROOT)include\pcl-1.11.0;$(PCL_ROOT)3rdParty\Eigen\eigen3;c:\Program Files\PCL 1.11.1\3rdParty\Boost\include\boost_1_73\;C:\Program Files\OpenNI2\Include;$(PCL_ROOT)3rdParty\FLANN\include;$(PCL_ROOT)3rdParty\Qhull\include;$(PCL_ROOT)3rdParty\VTK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;__SSSE3__;__SSE2__;__SSE__;vtkIOExport_AUTOINIT=1(vtkIOExportOpenGL2);vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL2);vtkRenderingCore_INCLUDE="$(ProjectDir.Replace('\', '/'))../PclSharp.Extern/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingOpenGL2.h";vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL2);BOOST_ALL_NO_LIB;DISABLE_OPENNI;DISABLE_ENSENSO;DISABLE_DAVIDSDK;DISABLE_DSSDK;DISABLE_RSSDK;DISABLE_PCAP;DISABLE_PNG;FLANN_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ResourceCompile>
