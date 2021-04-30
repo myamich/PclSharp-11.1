@@ -45,10 +45,12 @@ EXPORT(int) search_kdtree_xyz_getSortedResults(KdTree<PointXYZ>* ptr)
 	return ptr->getSortedResults(); 
 }
 
-EXPORT(int) search_kdtree_xyz_nearestKSearch(KdTree<PointXYZ>* ptr, PointXYZ point, int k, PointIndices* k_indices, vectorOfFloat* k_sqr_distance)
-{
-	return ptr->nearestKSearch(point, k, k_indices, k_sqr_distance);
+EXPORT(int) search_kdtree_xyz_nearestKSearch(KdTree<PointXYZ>* ptr, const PointXYZ & point1, int k, std::vector<int> k_indices, std::vector< float > k_sqr_distances;)
+{			
+		const int wynik= ptr->nearestKSearch(point1, k, k_indices, k_sqr_distances);
+		return wynik;
 }
 #ifdef __cplusplus  
 }
 #endif  
+// http://www.pcl-users.org/Find-closest-point-to-a-given-location-td4023326.html
