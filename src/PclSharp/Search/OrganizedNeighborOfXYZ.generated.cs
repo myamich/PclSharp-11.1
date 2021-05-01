@@ -2,6 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using PclSharp.Struct;
 using PclSharp.Std;
+using System.Collections.Generic;
 
 namespace PclSharp.Search
 {
@@ -21,6 +22,8 @@ namespace PclSharp.Search
 		public static extern void search_organizedNeighbor_xyz_setSortedResults(IntPtr ptr, bool value);
 		[DllImport(Native.DllName, CallingConvention=Native.CallingConvention)]
 		public static extern bool search_organizedNeighbor_xyz_getSortedResults(IntPtr ptr);
+		[DllImport(Native.DllName, CallingConvention = Native.CallingConvention)]
+		public static extern int search_organizedNeighbor_xyz_nearestKSearch(IntPtr ptr, PointXYZ point, int k, VectorOfInt k_indices, VectorOfFloat k_sqr_distances);
 	}
 
     public class OrganizedNeighborOfXYZ : OrganizedNeighbor<PointXYZ>
@@ -44,6 +47,11 @@ namespace PclSharp.Search
 		protected override void DisposeObject()
 		{
 			Invoke.search_organizedNeighbor_xyz_delete(ref _ptr);
+		}
+
+        public override int NearestKSearch(PointXYZ point, int k, VectorOfInt k_indices, VectorOfFloat k_sqr_distances)
+        {
+			return Invoke.search_organizedNeighbor_xyz_nearestKSearch(_ptr, point, k, k_indices, k_sqr_distances);
 		}
     }
 }

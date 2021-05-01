@@ -143,7 +143,6 @@
     <ClCompile Include="filters\StatisticalOutlierRemovalOfXYZ.generated.cpp" />
     <ClCompile Include="filters\VoxelGridOfXYZ.generated.cpp" />
     <ClCompile Include="io\PCDReader.generated.cpp" />
-    <ClCompile Include="io\PCDWriter.generated.cpp" />
     <ClCompile Include="pointcloud\PointCloudOfNormal.generated.cpp" />
     <ClCompile Include="pointcloud\PointCloudOfXYZ.generated.cpp" />
     <ClCompile Include="pointcloud\PointCloudOfXYZL.generated.cpp" />

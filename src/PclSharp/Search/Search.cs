@@ -13,6 +13,6 @@ namespace PclSharp.Search
 
         public abstract void SetInputCloud(PointCloud<PointT> cloud);
 
-        public abstract int NearestKSearch(PointT point, int k, PointIndices k_indices, List<VectorOfFloat> k_sqr_distances);
+        public abstract int NearestKSearch(PointT point, int k, VectorOfInt k_indices, VectorOfFloat k_sqr_distances);
     }
 }

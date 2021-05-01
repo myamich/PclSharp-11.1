@@ -34,9 +34,19 @@ EXPORT(void) search_organizedNeighbor_xyz_setInputCloud(OrganizedNeighbor<PointX
 }
 
 EXPORT(void) search_organizedNeighbor_xyz_setSortedResults(OrganizedNeighbor<PointXYZ>* ptr, int value)
-{ ptr->setSortedResults(value); }
+{ 
+	ptr->setSortedResults(value); 
+}
+
 EXPORT(int) search_organizedNeighbor_xyz_getSortedResults(OrganizedNeighbor<PointXYZ>* ptr)
-{ return ptr->getSortedResults(); }
+{ 
+	return ptr->getSortedResults(); 
+}
+
+EXPORT(int) search_organizedNeighbor_xyz_nearestKSearch(OrganizedNeighbor<PointXYZ>* ptr, const PointXYZ& point, int k, std::vector<int> k_indices, std::vector< float > k_sqr_distances)
+{
+	return ptr->nearestKSearch(point, k, k_indices, k_sqr_distances);
+}
 
 #ifdef __cplusplus  
 }
