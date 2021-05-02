@@ -15,7 +15,7 @@ namespace PclSharp.IO
 		public static extern void io_pcdreader_delete(ref IntPtr ptr);
 
 		[DllImport(Native.DllName, CallingConvention=Native.CallingConvention)]
-		public static extern int io_pcdreader_read_xyz(IntPtr ptr, string fileName, IntPtr cloud, int offset);
+		public static extern int io_pcdreader_read_xyz(IntPtr ptr, string fileName, PointCloud<PointXYZ> cloud, int offset);
 		[DllImport(Native.DllName, CallingConvention=Native.CallingConvention)]
 		public static extern int io_pcdreader_read_xyzrgba(IntPtr ptr, string fileName, IntPtr cloud, int offset);
 	}
@@ -29,7 +29,7 @@ namespace PclSharp.IO
 
 		public int Read(string fileName, PointCloud<PointXYZ> cloud, int offset=0)
 		{
-			var res = Invoke.io_pcdreader_read_xyz(_ptr, fileName, cloud.Ptr, offset);
+			var res = Invoke.io_pcdreader_read_xyz(_ptr, fileName, cloud, offset);
 			return res;
 		}
 
